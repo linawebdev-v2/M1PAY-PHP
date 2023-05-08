@@ -115,10 +115,11 @@ $params['signedData'] = $signature;
 //the parameter-values that need to send
 $params_string = json_encode($params);
 
-$myfile = fopen("payment_request_m1pay.txt", "a") or die("Unable to open file!");
+//Open this comment to log into your server
+/*$myfile = fopen("payment_request_m1pay.txt", "a") or die("Unable to open file!");
 $txt = date('Ymd H:i:s')."\n\n".print_r($_POST,1)."\n\n\n";
 fwrite($myfile, $txt);
-fclose($myfile);
+fclose($myfile);*/
 
 //add authorization in header later
 $authorization = 'authorization: Bearer'.trim($access_token);

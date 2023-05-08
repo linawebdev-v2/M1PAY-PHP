@@ -2,8 +2,9 @@
 include "inc.php";
 
 if(isset($_POST) && !empty($_POST)){
-    $myfile = fopen("post_callback_data.txt", "a") or die("Unable to open file!");
-    $txt = date('Ymd H:i:s')."\nM1PAY RESPONSE:\n".print_r($_POST,1)."\n";
+    //Open this comment to log into your server
+    /*$myfile = fopen("post_callback_data.txt", "a") or die("Unable to open file!");
+    $txt = date('Ymd H:i:s')."\nM1PAY RESPONSE:\n".print_r($_POST,1)."\n";*/
     
     //Verify the data from M1Pay
     $raw_data = $_POST['transactionAmount']."|".$_POST['fpxTxnId']."|".$_POST['sellerOrderNo']."|".$_POST['status']."|".$_POST['merchantOrderNo'];
@@ -24,10 +25,11 @@ if(isset($_POST) && !empty($_POST)){
         echo 'Caught exception: ', $e->getMessage(), "\n"; 
     } 
 
-    $txt .= "Verified Data: ".( $r ? "Success" : "Failed" )."\n\n\n";
-    
+    //Open this comment to log into your server
+    /*$txt .= "Verified Data: ".( $r ? "Success" : "Failed" )."\n\n\n";
     fwrite($myfile, $txt);
-    fclose($myfile);
+    fclose($myfile);*/
 
+    //If use Postman to see the result
     echo "M1Pay Reponse Data Logged and Verified as ". ( $r ? "Success" : "Failed" ); 
 }
