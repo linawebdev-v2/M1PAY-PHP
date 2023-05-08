@@ -35,8 +35,8 @@ switch($env){
 //Parameter Value
 $fields = array();
 $fields['grant_type'] = 'client_credentials';
-$fields['client_id'] = '92056548';
-$fields['client_secret'] = '2b7345eb-8b36-4bf7-a15f-aab6e6c1fe31';
+$fields['client_id'] = getenv("KEYCLOACK_CLIENT_ID");
+$fields['client_secret'] = getenv("KEYCLOACK_CLIENT_SECRET");
 
 $fields_string = http_build_query($fields);
 
