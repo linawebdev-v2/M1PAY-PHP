@@ -1,10 +1,14 @@
 # Introduction
 
-To support M1Pay Payment Integration in PHP language for MobilityOne
+To support M1Pay Payment Integration in PHP language for MobilityOne.
+The development is using Docker.
 
 # Requirements
-1- Merchant needs to register to M1Pay first  
-2- Upon approval, merchant may obtain the credential such as  
+1- Register to M1Pay first  
+
+# Process to Setup M1Pay Payment Integration
+
+2- After registration and M1 approve, merchant may obtain the credential such as  
    - Client ID  
    - Client Secret  
    - File of private key  
