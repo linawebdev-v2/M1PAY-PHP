@@ -7,7 +7,7 @@ The development is using Docker.
 Register to M1Pay first  
 
 # Process to Setup M1Pay Payment Integration
-1- Initial setup usualy on M1Pay UAT Environment before live in production server.
+1- Initial setup usualy on M1Pay UAT Environment before live in production server.  
 2- After registration and M1 approve, merchant may obtain the credential such as  
    - Client ID  
    - Client Secret  
